@@ -1,0 +1,119 @@
+﻿{
+  "users": [
+    {
+      "id": 1,
+      "name": "Walt White",
+      "cart": {
+        "cartItems": []
+      }
+    },
+    {
+      "id": 2,
+      "name": "Saul Goodman",
+      "cart": {
+        "cartItems": [
+          {
+            "name": "Small mashed",
+            "unitPrice": 1.5,
+            "productId": 211,
+            "quantity": 2
+          },
+          {
+            "name": "Fountain drink",
+            "unitPrice": 1.75,
+            "productId": 221,
+            "quantity": 3
+          }
+        ]
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": 201,
+      "name": "3-pc dark meat",
+      "price": 4.5
+    },
+    {
+      "id": 202,
+      "name": "3-pc white meat",
+      "price": 6.0
+    },
+    {
+      "id": 203,
+      "name": "5-pc dark meat",
+      "price": 7.5
+    },
+    {
+      "id": 204,
+      "name": "5-pc white meat",
+      "price": 9.5
+    },
+    {
+      "id": 211,
+      "name": "Small mashed",
+      "price": 1.5
+    },
+    {
+      "id": 212,
+      "name": "Large mashed",
+      "price": 2.5
+    },
+    {
+      "id": 213,
+      "name": "Sweet corn",
+      "price": 1.0
+    },
+    {
+      "id": 214,
+      "name": "Blue crystal",
+      "price": 100.0
+    },
+    {
+      "id": 221,
+      "name": "Fountain drink",
+      "price": 1.75
+    },
+    {
+      "id": 222,
+      "name": "Milk",
+      "price": 2.1
+    },
+    {
+      "id": 223,
+      "name": "Bottled water",
+      "price": 1.5
+    }
+  ],
+  "categories": [
+    {
+      "id": 301,
+      "name": "Chicken",
+      "productIds": [
+        201,
+        202,
+        203,
+        204
+      ]
+    },
+    {
+      "id": 302,
+      "name": "Sides",
+      "productIds": [
+        211,
+        212,
+        213,
+        214
+      ]
+    },
+    {
+      "id": 303,
+      "name": "Beverages",
+      "productIds": [
+        221,
+        222,
+        223
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿<h3>Your Tray</h3>
+<ul class="nav nav-list">
+    {{#items}}
+    <li class="cart-item" data-product-id="{{productId}}">
+        <span class="name">{{name}}</span>
+        <span class="qty">{{quantity}}</span>
+        x<span class="price">{{formattedPrice}}</span>
+        <button class="remove btn-danger">
+            <i class="icon-trash"></i>
+        </button>
+    </li>
+    {{/items}}
+</ul>
+<hr>
+<div class="total">Total: <span class="total-price"></span></div>

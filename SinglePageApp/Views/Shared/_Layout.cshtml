@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>@ViewBag.Title :: Los Pollos Hermanos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="~/static/lib/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/static/lib/bootstrap/css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" href="~/static/lib/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="~/static/lib/bootstrap/css/bootswatch.css" />
+        <link rel="stylesheet" href="~/static/css/app.css" />
+    </head>
+
+    <body zzclass="preview">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/home">Los Pollos Hermanos</a> 
+                    <div class="nav-collapse collapse" id="main-menu">
+                        <ul class="nav" id="main-menu-left">
+                            <li><a href="/home">Home</a></li>
+                            <li><a id="swatch-link" href="/store">Buy Online</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content container">
+            @RenderBody()
+        </div>
+
+        <script src="~/static/app/config.js"></script>
+        <script data-main="@ViewBag.PageModule" src="~/static/lib/require/require.js"></script>
+        <script src="~/static/lib/jquery.js"></script>
+        <script src="~/static/lib/bootstrap/js/bootstrap.js"></script>
+
+        @RenderSection("PageScripts", false)
+
+
+    </body>
+</html>

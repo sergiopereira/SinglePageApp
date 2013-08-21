@@ -1,0 +1,7 @@
+﻿<h3>Menu</h3>
+<ul class="nav nav-list">
+    {{#items}}
+    <li class="category{{#selected}} active{{/selected}}" 
+        data-category-id="{{id}}"><a href="#">{{name}}</a></li>
+    {{/items}}
+</ul>

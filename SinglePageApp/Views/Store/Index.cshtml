@@ -1,0 +1,21 @@
+﻿@model IList<CategoryView>
+
+@{
+    ViewBag.Title = "Online Ordering";
+    ViewBag.PageModule = "onlinestore/page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="span3">
+        <img src="/static/images/Los_Pollos.png" alt="" />
+    </div>
+    <div class="span7 offset2">
+        <h1>Dark Meat, White Meat, Order Now</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="span2" id="category-list">@{Html.RenderAction("CategoryList");}</div>
+    <div class="span3 offset1" id="product-list"></div>
+    <div class="span4 offset1" id="cart"></div>
+</div>

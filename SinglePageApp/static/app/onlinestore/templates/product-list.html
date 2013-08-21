@@ -1,0 +1,12 @@
+﻿<h3>Options</h3>
+<ul class="nav nav-list">
+    <% for(var i=0; i< items.length; i++) { %>
+    <li class="product" data-product-id="<%= items[i].id %>">
+        <span class="name"><%- items[i].name %></span>
+        <span class="price">$<%- items[i].price.toFixed(2) %></span>
+        <button class="add btn-success">
+            <i class="icon-plus"></i>
+        </button>
+    </li>
+    <% } %>
+</ul>
