@@ -19,7 +19,7 @@
             
             onCategorySelected: function (category, envelope) {
                 this.selectedCategory = category;
-                this.resetProductsView(category);
+                this.resetProductsView();
             },
             
             onAddProductToCart: function(product) {
@@ -63,8 +63,9 @@
                     .done(function (categories) {
                         ctrl.categories = categories;
                         ctrl.categoriesView = new CategoriesView({ collection: categories, el: '#category-list' });
+                        ctrl.categoriesView.render();
                         //ctrl.categoriesView.render().$el.appendTo('#category-list');
-                        bus.postMessage(bus.channels.ui, 'category:selected', categories.first());
+                        //bus.postMessage(bus.channels.ui, 'category:selected', categories.first());
                     })
                     .fail(function (err) {
                         bus.postMessage(bus.channels.logger, 'error', err);

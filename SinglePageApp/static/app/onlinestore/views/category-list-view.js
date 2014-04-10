@@ -22,10 +22,11 @@
                 event.preventDefault();
             },
 
-            render: function () {
+            renderView: function () {
                 var items = this.collection.toJSON();
                 items[0].selected = true;
                 this.$el.html(this.inflateTemplate(viewTemplate, {items: items} ));
+                bus.postMessage(bus.channels.ui, 'category:selected', this.collection.at(0));
                 return this;
             }
 

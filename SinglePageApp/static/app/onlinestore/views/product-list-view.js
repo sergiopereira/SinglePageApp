@@ -22,7 +22,7 @@
 
             inflate: _.template(viewTemplate),
 
-            render: function () {
+            renderView: function () {
                 this.$el.html(this.inflate({ items: this.collection.toJSON() }));
                 return this;
             }

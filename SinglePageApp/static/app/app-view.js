@@ -20,6 +20,7 @@
                 this.trigger('refresh');
             }
             this.rendered = true;
+            return this;
         },
         
         appendToDom: function (parentElement) {

@@ -1,5 +1,5 @@
-﻿define(['bus', 'underscore', 'jquery', 'app-view', './cart-item-view', 'text!../templates/cart.html'],
-    function (bus, _, $, AppView, CartITemView, viewTemplate) {
+﻿define(['bus', 'underscore', 'jquery', 'app-view', 'text!../templates/cart.html'],
+    function (bus, _, $, AppView, viewTemplate) {
         return AppView.extend({
 
             initialize: function () {
@@ -21,7 +21,7 @@
                 bus.postMessage(bus.channels.ui, 'cart:remove-product', id);
             },
 
-            render: function () {
+            renderView: function () {
                 var cart = this.model.toJSON();
                 _.each(cart.items, function(item) { return item.formattedPrice = '$' + item.unitPrice.toFixed(2); });
                 this.$el.html(this.inflateTemplate(viewTemplate, cart));
@@ -34,8 +34,7 @@
                     total;
 
                 total = _.reduce(this.model.get('items'), function(sum, item) {
-                    console.log('item', item);
-                     return sum + item.unitPrice * item.quantity;
+                    return sum + item.unitPrice * item.quantity;
                 }, 0);
                 $totalPrice.text(total.toFixed(2));
             },

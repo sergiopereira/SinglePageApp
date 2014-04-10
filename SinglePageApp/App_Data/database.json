@@ -11,20 +11,7 @@
       "id": 2,
       "name": "Saul Goodman",
       "cart": {
-        "cartItems": [
-          {
-            "name": "Small mashed",
-            "unitPrice": 1.5,
-            "productId": 211,
-            "quantity": 2
-          },
-          {
-            "name": "Fountain drink",
-            "unitPrice": 1.75,
-            "productId": 221,
-            "quantity": 3
-          }
-        ]
+        "cartItems": []
       }
     }
   ],
